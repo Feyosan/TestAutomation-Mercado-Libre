@@ -107,7 +107,7 @@ README.md
 
 ### 4. Clic en botón Filtrar
 `When toco el botón Filtrar`  
-![04_filtro](evidencias/04_filtro.png)
+![04_filtro](evidencias/04_filtrar.png)
 
 ---
 
