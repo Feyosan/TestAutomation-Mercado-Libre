@@ -85,7 +85,71 @@ README.md
 ---
 
 
-## STEPS IMAGES
+## 📋 Steps con Evidencia
+
+### 1. Selección del país
+`When selecciono México como país`  
+![01_seleccion_pais](evidencias/01_seleccion_pais.png)
+
+---
+
+### 2. Cierre del popup de la app
+`And cierro el popup de la app si aparece`  
+![02_cerrar_popup](evidencias/02_cerrar_popup.png)
+
+---
+
+### 3. Búsqueda del término "playstation 5"
+`And busco el término {string}`  
+![03_busqueda_termino](evidencias/03_busqueda_termino.png)
+
+---
+
+### 4. Clic en botón Filtrar
+`When toco el botón Filtrar`  
+![04_filtro](evidencias/04_filtro.png)
+
+---
+
+### 5. Clic en botón Condición
+`And toco el botón Condición`  
+![05_condicion](evidencias/05_condicion.png)
+
+---
+
+### 6. Selección de opción Nuevo
+`And selecciono la opción Nuevo`  
+![06_nuevo](evidencias/06_nuevo.png)
+
+---
+
+### 7. Clic en botón Ubicación
+`And toco el botón Ubicación`  
+![07_ubicacion](evidencias/07_ubicacion.png)
+
+---
+
+### 8. Selección de ubicación Distrito Federal
+`And selecciono la ubicación Distrito Federal`  
+![08_distrito_federal](evidencias/08_distrito_federal.png)
+
+---
+
+### 9. Clic en botón Ordenar
+`And toco el botón Ordenar`  
+![09_ordenar](evidencias/09_ordenar.png)
+
+---
+
+### 10. Selección de opción Mayor precio
+`And selecciono la opción Mayor precio`  
+![10_mayor_precio](evidencias/10_mayor_precio.png)
+
+---
+
+### 11. Mostrar los primeros 5 productos en consola
+`Then muestro los primeros 5 productos en consola`  
+![11_lista_productos](evidencias/11_lista_productos.png)
 
 
 
