@@ -6,16 +6,12 @@ def take_screenshot(name)
 end
 
 
-
 Given('que estoy en el sitio de Mercado Libre') do
   $driver.get('https://www.mercadolibre.com')
-  sleep 5
-  take_screenshot('01_inicio_sitio')
 end
 
 When('selecciono México como país') do
   wait = Selenium::WebDriver::Wait.new(timeout: 10)
-
   begin
     # Intenta encontrar el botón sin hacer scroll
     mexico_btn = wait.until {
@@ -32,11 +28,10 @@ When('selecciono México como país') do
       el.displayed? ? el : nil
     }
   end
-
-  mexico_btn.click
-
+  take_screenshot('001_mexico')
   sleep 5
-  take_screenshot('02_Seleccion_pais')
+  mexico_btn.click
+  
 end
 
 And('cierro el popup de la app si aparece') do
@@ -51,8 +46,6 @@ And('cierro el popup de la app si aparece') do
       el = $driver.find_element(:xpath, "//android.widget.Button[@resource-id='download-app-bottom-banner-close']")
       el.displayed? ? el : nil
     }
-    sleep 5
-    take_screenshot('03_cerrar_popup')
     close_btn.click
     puts "Popup cerrado correctamente"
   rescue Selenium::WebDriver::Error::TimeoutError
@@ -62,7 +55,6 @@ And('cierro el popup de la app si aparece') do
   ensure
     $driver.set_context(original_context)
   end
-
 end
 
 
@@ -71,8 +63,6 @@ And('busco el término {string}') do |termino|
   sleep 10
   search_input = $driver.find_element(:css, 'input[name="as_word"]')
   search_input.send_keys(termino)
-  sleep 5
-  take_screenshot('04_busqueda_termino')
   search_input.submit
   sleep 10
 end
@@ -88,8 +78,6 @@ When('toco el botón Filtrar') do
     }
 
     filtrar_btn.click
-    sleep 5
-    take_screenshot('05_filtro')
     puts "Botón 'Filtrar' tocado correctamente"
 
     # Scroll después de abrir el menú para asegurar que se vea 'Condición'
@@ -115,8 +103,7 @@ And('toco el botón Condición') do
       el = $driver.find_element(:xpath, "//ul[@id=':R3e:']/li[5]") 
       el.displayed? ? el : nil
     }
-    sleep 5
-    take_screenshot('06_condicion')
+
     condicion_btn.click
     puts "Botón 'Condición' tocado correctamente"
   rescue Selenium::WebDriver::Error::TimeoutError
@@ -137,8 +124,7 @@ And('selecciono la opción Nuevo') do
       el = $driver.find_element(:xpath, "//li[@id=':r0:-1']/a")
       el.displayed? ? el : nil
     }
-    sleep 5
-    take_screenshot('07_nuevo')
+
     nuevo_btn.click
     puts "Opción 'Nuevo' seleccionada correctamente"
   rescue => e
@@ -156,8 +142,7 @@ And('toco el botón Ubicación') do
       el = $driver.find_element(:xpath, "//ul[@id=':R3e:']/li[10]")
       el.displayed? ? el : nil
     }
-    sleep 5
-    take_screenshot('08_ubicacion')
+
     ubicacion_btn.click
     puts "Botón 'Ubicación' tocado correctamente"
   rescue Selenium::WebDriver::Error::TimeoutError
@@ -176,8 +161,7 @@ And('selecciono la ubicación Distrito Federal') do
       el = $driver.find_element(:xpath, "//li[@id=':r0:-1']/a")
       el.displayed? ? el : nil
     }
-    sleep 5
-    take_screenshot('09_distrito_federal')
+
     distrito_btn.click
     puts "Ubicación 'Distrito Federal' seleccionada correctamente"
   rescue Selenium::WebDriver::Error::TimeoutError
@@ -198,8 +182,7 @@ And('toco el botón Ordenar') do
       el = $driver.find_element(:xpath, "//main[@id='root-app']/div/div[2]/div/ul/li[1]")
       el.displayed? ? el : nil
     }
-    sleep 5
-    take_screenshot('10_ordenar')
+
     ordenar_btn.click
     puts "Botón 'Ordenar' tocado correctamente"
   rescue Selenium::WebDriver::Error::TimeoutError
@@ -219,8 +202,7 @@ And('selecciono la opción Mayor precio') do
       el = $driver.find_element(:xpath, "//ul/li[3]/a")
       el.displayed? ? el : nil
     }
-    sleep 5
-    take_screenshot('11_mayor_precio')
+
     mayor_precio_btn.click
     puts "Opción 'Mayor precio' seleccionada correctamente"
   rescue Selenium::WebDriver::Error::TimeoutError
