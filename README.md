@@ -89,7 +89,7 @@ README.md
 
 ### 1. Selección del país
 `When selecciono México como país`  
-![01_seleccion_pais](https://github.com/Feyosan/TestAutomation-Mercado-Libre/blob/2a44920f879bcdd85ba4cf34d76ae75f0c66bd06/evidencias/image.png)
+![01_seleccion_pais](evidencias/01_seleccion_pais.png)
 
 ---
 
