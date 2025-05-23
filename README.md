@@ -9,8 +9,10 @@ Este proyecto automatiza una prueba funcional en el sitio web de [Mercado Libre]
 - Ruby 3.x
 - Bundler (`gem install bundler`)
 - Appium Server v2 (`npm install -g appium`)
+- Appium Inspector
 - ChromeDriver (se puede usar `--allow-insecure chromedriver_autodownload`)
 - Dispositivo Android conectado vía USB con modo desarrollador y depuración activados
+- Dipositivo Android
 
 ---
 
