@@ -37,7 +37,7 @@ bundle install
 
 appium --allow-insecure chromedriver_autodownload
 
-2. En otra terminal ya sea la del propio VScode o CMD, ejecuta la prueba:
+2. En otra terminal ya sea la del propio VScode o CMD con git bash, ejecuta la prueba:
 
 bundle exec cucumber features/search_playstation.feature
 
