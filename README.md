@@ -158,4 +158,4 @@ README.md
 
 ## 👤 Autor
 
-José Alfredo Albarrán Sánchez — [@TuGitHub](https://github.com/TuGitHub)
+José Alfredo Albarrán Sánchez — [MiGitHub-Feyosan](https://github.com/Feyosan)
