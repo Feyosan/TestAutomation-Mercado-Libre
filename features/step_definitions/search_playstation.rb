@@ -1,8 +1,8 @@
-
 Given('que estoy en el sitio de Mercado Libre') do
   $driver.get('https://www.mercadolibre.com')
 end
-
+----------------------------------
+  
 When('selecciono México como país') do
   wait = Selenium::WebDriver::Wait.new(timeout: 10)
   begin
@@ -22,9 +22,10 @@ When('selecciono México como país') do
     }
   end
   mexico_btn.click
-  
 end
 
+--------------------------------------------
+  
 And('cierro el popup de la app si aparece') do
   original_context = $driver.current_context
 
@@ -48,15 +49,17 @@ And('cierro el popup de la app si aparece') do
   end
 end
 
+------------------------------------------------------------------
 
 And('busco el término {string}') do |termino|
-
   sleep 10
   search_input = $driver.find_element(:css, 'input[name="as_word"]')
   search_input.send_keys(termino)
   search_input.submit
   sleep 10
 end
+
+-------------------------------------------------------------------
 
 When('toco el botón Filtrar') do
   begin
@@ -83,7 +86,7 @@ When('toco el botón Filtrar') do
   sleep 5
 end
 
-
+-----------------------------------------------------------------
 
 
 And('toco el botón Condición') do
@@ -106,7 +109,7 @@ And('toco el botón Condición') do
   sleep 5
 end
 
-
+----------------------------------------------------------------
 
 And('selecciono la opción Nuevo') do
   begin
@@ -125,6 +128,8 @@ And('selecciono la opción Nuevo') do
   end
   sleep 5
 end
+
+-----------------------------------------------------------------
 
 And('toco el botón Ubicación') do
   begin
@@ -146,6 +151,8 @@ And('toco el botón Ubicación') do
   sleep 5
 end
 
+------------------------------------------------------------
+
 And('selecciono la ubicación Distrito Federal') do
   begin
     puts "Buscando opción 'Distrito Federal' en contexto web"
@@ -166,6 +173,7 @@ And('selecciono la ubicación Distrito Federal') do
   sleep 5
 end
 
+------------------------------------------------------------
 
 And('toco el botón Ordenar') do
   begin
@@ -187,6 +195,8 @@ And('toco el botón Ordenar') do
   sleep 5
 end
 
+---------------------------------------------------------------
+
 And('selecciono la opción Mayor precio') do
   begin
     puts "Buscando opción 'Mayor precio' en contexto web"
@@ -206,6 +216,8 @@ And('selecciono la opción Mayor precio') do
   end
   sleep 5
 end
+
+------------------------------------------------------------------
 
 Then('muestro los primeros 5 productos en consola') do
   begin
