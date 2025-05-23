@@ -1,10 +1,3 @@
-def take_screenshot(name)
-  Dir.mkdir('evidencias') unless Dir.exist?('evidencias')
-  path = "evidencias/#{name}.png"
-  $driver.screenshot(path)
-  puts "📸 Evidencia guardada en: #{path}"
-end
-
 
 Given('que estoy en el sitio de Mercado Libre') do
   $driver.get('https://www.mercadolibre.com')
@@ -28,8 +21,6 @@ When('selecciono México como país') do
       el.displayed? ? el : nil
     }
   end
-  take_screenshot('001_mexico')
-  sleep 5
   mexico_btn.click
   
 end
@@ -89,6 +80,7 @@ When('toco el botón Filtrar') do
   rescue => e
     puts "Error al tocar botón 'Filtrar': #{e.message}"
   end
+  sleep 5
 end
 
 
@@ -111,6 +103,7 @@ And('toco el botón Condición') do
   rescue => e
     puts "Error al tocar botón 'Condición': #{e.message}"
   end
+  sleep 5
 end
 
 
@@ -150,6 +143,7 @@ And('toco el botón Ubicación') do
   rescue => e
     puts "Error al tocar botón 'Ubicación': #{e.message}"
   end
+  sleep 5
 end
 
 And('selecciono la ubicación Distrito Federal') do
