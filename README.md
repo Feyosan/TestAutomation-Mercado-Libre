@@ -62,6 +62,7 @@ bundle exec cucumber features/search_playstation.feature
 ## 🧪 Herramientas usadas
 
 - Appium
+- Appium inspector
 - Ruby
 - Cucumber
 - Selenium WebDriver
