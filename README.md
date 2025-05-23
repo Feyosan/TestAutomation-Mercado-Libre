@@ -12,7 +12,7 @@ Este proyecto automatiza una prueba funcional en el sitio web de [Mercado Libre]
 - Appium Inspector
 - ChromeDriver (se puede usar `--allow-insecure chromedriver_autodownload`)
 - Dispositivo Android conectado vía USB con modo desarrollador y depuración activados
-- Dipositivo Android
+
 
 ---
 
